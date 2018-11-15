@@ -37,4 +37,10 @@ npm install -g webpack
 npm install
 ```
 
-# students-also-bought-service
+# Additional CRUD
+| Endpoint	         | Method	| Description|
+| ------------------ | ---------| --------------- |
+| /courses/:courseId |	POST |Adding more course to the DB|
+| /courses/:courseId |	GET	|Retrieving details about a particular course from the DB|
+| /courses/:courseId |	PUT	| Updating details about a particular course in the DB|
+| /courses/:courseId |	DELETE	|Deleting a particular course from the DB|
