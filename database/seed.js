@@ -1,8 +1,8 @@
 // var mysql = require('mysql');
 var load = require('./index.js');
 var faker = require('faker');
-var courses = require('./courseData.js');
-var photos = require('./photoData.js');
+var courses = require('./courseTitles.js');
+var photos = require('./photoUrls.js');
 
 const randomNumGenerator = function(min, max, decimalPlaces) {
   var rand = (Math.random() * (max - min)) + min;

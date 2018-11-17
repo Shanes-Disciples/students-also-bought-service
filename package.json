@@ -11,6 +11,8 @@
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/server.js",
     "seed": "node database/seed.js",
+    "generateCourseData": "node database/seedPostgreSQL.js",
+    "generatePurchaseData": "node database/generatePurchaseData.js",
     "test": "jest"
   },
   "jest": {
@@ -22,7 +24,10 @@
       "^.+\\.(css|scss)$": "identity-obj-proxy"
     },
     "collectCoverage": true,
-    "coverageReporters": ["json", "html"]
+    "coverageReporters": [
+      "json",
+      "html"
+    ]
   },
   "dependencies": {
     "bluebird": "^3.5.2",
@@ -45,6 +50,7 @@
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "fs": "0.0.1-security",
     "jest": "^23.6.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.23.1",

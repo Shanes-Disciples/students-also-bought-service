@@ -1,17 +1,17 @@
-// connect mysql to DB
-// formulate get and post query
+const _ = require('underscore');
+const dbConfig = require('.psqlConfig.js');
+const port = 3000;
 
-const mysql = require('mysql');
-const faker = require('faker');
-var _ = require('underscore');
-
-
-connection = mysql.createConnection({
-  host: 'rds-mysql-fec-studentsalsobought.c9exxoe1goym.us-west-1.rds.amazonaws.com',
-  user: 'sharkhouse23',
-  password: 'hackertobe89',
-  database: 'udemy_similar_component',
+//setup postgreSQL connection
+const {Client} = require('pg')
+const client = new Client({
+  host: dbConfig.host,
+  user: dbConfig.username,
+  password: dbConfig.password,
+  database: dbConfig.database,
+  port: port
 });
+client.connect();
 
 connection = require('bluebird').promisifyAll(connection);
 

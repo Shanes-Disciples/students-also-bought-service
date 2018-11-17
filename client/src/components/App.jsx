@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 import SimilarCourses from './SimilarCourses.jsx';
 import styles from './styles.css';
 
